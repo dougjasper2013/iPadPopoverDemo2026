@@ -42,6 +42,7 @@ struct DetailView: View {
                          arrowEdge: .top) {
                     SettingsPopoverView(isPresented: $showingPopover)
                         .environmentObject(settings)
+                        .preferredColorScheme(preferredColorScheme(for: settings.theme))
                         .frame(minWidth: 320, idealWidth: 360, maxWidth: 420,
                                minHeight: 320, idealHeight: 400, maxHeight: 500)
                 }
